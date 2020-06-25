@@ -1,7 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesService {
-  const SharedPreferencesService._();
   SharedPreferencesService();
 
   static SharedPreferencesService _instance;

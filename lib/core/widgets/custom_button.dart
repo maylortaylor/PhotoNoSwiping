@@ -6,7 +6,7 @@ class CustomButton extends StatelessWidget {
   CustomButton(
       {@required this.buttonText,
       @required this.onPressed,
-      Color this.buttonColor = AppColors.accent1});
+      this.buttonColor = AppColors.accent1});
   final String buttonText;
   final Color buttonColor;
   final GestureTapCallback onPressed;

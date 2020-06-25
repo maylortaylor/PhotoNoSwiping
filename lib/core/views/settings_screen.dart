@@ -7,7 +7,6 @@ import 'package:photo_no_swiping/core/widgets/custom_button.dart';
 import 'package:photo_no_swiping/customThemes.dart';
 import 'package:photo_no_swiping/utils/ui_util.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -18,8 +17,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return BaseWidget<SettingsScreenViewModel>(
-        model: SettingsScreenViewModel(
-            sharedPreferencesService: Provider.of(context)),
+        model: SettingsScreenViewModel(),
         builder: (context, model, child) => Scaffold(
               drawer: DrawerOnly(),
               body: Scaffold(

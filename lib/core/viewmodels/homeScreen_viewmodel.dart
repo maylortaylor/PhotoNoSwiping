@@ -1,5 +1,5 @@
-import 'package:photo_no_swiping/core/constants/app_theme.dart';
-import 'package:photo_no_swiping/utils/sharedpref_util.dart';
+// import 'package:photo_no_swiping/core/constants/app_theme.dart';
+// import 'package:photo_no_swiping/utils/sharedpref_util.dart';
 import 'package:flutter/material.dart';
 import 'package:image_pickers/image_pickers.dart';
 import 'package:image_pickers/CropConfig.dart';
@@ -7,11 +7,11 @@ import 'package:image_pickers/Media.dart';
 import 'package:image_pickers/UIConfig.dart';
 
 class HomeScreenViewModel extends ChangeNotifier {
-  SharedPreferencesService _sharedPreferencesService;
+  // SharedPreferencesService _sharedPreferencesService;
 
-  HomeScreenViewModel(
-      {@required SharedPreferencesService sharedPreferencesService})
-      : _sharedPreferencesService = sharedPreferencesService;
+  // HomeScreenViewModel(
+  //     {@required SharedPreferencesService sharedPreferencesService})
+  //     : _sharedPreferencesService = sharedPreferencesService;
 
   Future<List<Media>> selectImages(BuildContext context) async {
     List<Media> _listImagePaths = await ImagePickers.pickerPaths(

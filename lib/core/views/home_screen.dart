@@ -6,7 +6,6 @@ import 'package:photo_no_swiping/core/viewmodels/homeScreen_viewmodel.dart';
 import 'package:photo_no_swiping/core/views/drawerOnly.dart';
 import 'package:photo_no_swiping/core/widgets/base_widget.dart';
 import 'package:photo_no_swiping/core/widgets/swiper_image.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -50,7 +49,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return BaseWidget<HomeScreenViewModel>(
         model:
-            HomeScreenViewModel(sharedPreferencesService: Provider.of(context)),
+            // HomeScreenViewModel(sharedPreferencesService: Provider.of(context)),
+            HomeScreenViewModel(),
         builder: (context, model, child) => Scaffold(
               appBar: isLocked == true
                   ? null

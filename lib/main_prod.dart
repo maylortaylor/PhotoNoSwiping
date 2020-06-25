@@ -5,7 +5,7 @@ import 'package:photo_no_swiping/appRoot.dart';
 import 'package:photo_no_swiping/customTheme.dart';
 import 'package:photo_no_swiping/customThemes.dart';
 import 'package:photo_no_swiping/utils/json_util.dart';
-import 'package:photo_no_swiping/utils/sharedPref_util.dart';
+// import 'package:photo_no_swiping/utils/sharedPref_util.dart';
 import 'package:photo_no_swiping/env.dart';
 
 void main() {
@@ -14,10 +14,10 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   parseJsonFromAssets('assets/prod.env.json').then((dynamic data) async {
-    SharedPreferencesService prefs =
-        await SharedPreferencesService.getInstance();
-    Brightness brightness =
-        (prefs.darkMode ?? false) ? Brightness.dark : Brightness.light;
+    // SharedPreferencesService prefs =
+    //     await SharedPreferencesService.getInstance();
+    // Brightness brightness =
+    //     (prefs.darkMode ?? false) ? Brightness.dark : Brightness.light;
 
     BuildEnvironment.init(
         flavor: BuildFlavor.production, appName: data['APP_NAME']);

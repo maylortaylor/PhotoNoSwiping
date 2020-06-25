@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:photo_no_swiping/core/constants/app_strings.dart';
 import 'package:photo_no_swiping/core/widgets/splashScreen_widget.dart';
 import 'package:photo_no_swiping/routes.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigate() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
+    // SharedPreferences preferences = await SharedPreferences.getInstance();
 
     Navigator.of(context).pushReplacementNamed(Routes.home);
     // if (preferences.getBool(Preferences.is_logged_in) == true) {
