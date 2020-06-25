@@ -1,8 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPreferencesService {
-  SharedPreferencesService();
-
   static SharedPreferencesService _instance;
   static SharedPreferences _preferences;
 
@@ -10,18 +8,33 @@ class SharedPreferencesService {
 
   static Future<SharedPreferencesService> getInstance() async {
     if (_instance == null) {
-      _instance = SharedPreferencesService();
-    }
-    if (_preferences == null) {
-      _preferences = await SharedPreferences.getInstance();
+      // keep local instance till it is fully initialized.
+      var secureStorage = SharedPreferencesService._();
+      await secureStorage._init();
+      _instance = secureStorage;
     }
     return _instance;
   }
 
-  dynamic _getFromDisk(String key) {
-    var value = _preferences.get(key);
-    print('(TRACE) LocalStorageService:_getFromDisk. key: $key value: $value');
-    return value;
+  SharedPreferencesService._();
+  Future _init() async {
+    _preferences = await SharedPreferences.getInstance();
+  }
+
+  // get string
+  static String getString(String key, {String defValue = ''}) {
+    if (_preferences == null) return defValue;
+    print(
+        '(TRACE) SharedPreferencesService:getString. key: $key value: $defValue');
+    return _preferences.getString(key) ?? defValue;
+  }
+
+  // put string
+  static Future putString(String key, String value) {
+    if (_preferences == null) return null;
+    print(
+        '(TRACE) SharedPreferencesService:putString. key: $key value: $value');
+    return _preferences.setString(key, value);
   }
 
   void _saveToDisk<T>(String key, T content) {
@@ -44,6 +57,6 @@ class SharedPreferencesService {
     }
   }
 
-  bool get darkMode => _getFromDisk(DarkModeKey) ?? false;
+  bool get darkMode => getString(DarkModeKey) ?? false;
   set darkMode(bool value) => _saveToDisk(DarkModeKey, value);
 }
