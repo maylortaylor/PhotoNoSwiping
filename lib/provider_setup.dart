@@ -1,5 +1,5 @@
-import 'package:photo_no_swiping/utils/sharedpref_util.dart';
-import 'package:provider/provider.dart';
+// import 'package:photo_no_swiping/utils/sharedpref_util.dart';
+// import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
 // ! architecture guided by: https://github.com/FilledStacks/flutter-tutorials/tree/master/014-provider-v3-updates/2-final
@@ -14,7 +14,7 @@ List<SingleChildWidget> providers = [
 List<SingleChildWidget> independentServices = [
   // Provider.value(value: SearchService()),
   // Provider.value(value: FirestoreImageService()),
-  Provider.value(value: SharedPreferencesService())
+  // Provider.value(value: SharedPreferencesService())
 ];
 
 // ? These are classes/object that depend on previously registered services
