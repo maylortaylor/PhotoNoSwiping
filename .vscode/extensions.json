@@ -1,0 +1,13 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    "pflannery.vscode-versionlens",
+    "wayou.vscode-todo-highlight",
+    "aaron-bond.better-comments",
+    "eamodio.gitlens",
+    "dart-code.flutter",
+    "dart-code.dart-code",
+    "msjsdiag.debugger-for-chrome"
+  ]
+}

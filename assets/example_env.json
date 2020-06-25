@@ -1,0 +1,7 @@
+// ! this is for example purposes only. 
+// ! you will need to create two new files with this format and any extra variables you wish to load at runtime
+// ! one file named: dev.env.json 
+// ! one file named: prod.env.json 
+{
+    "APP_NAME": "photo-no-swiping"
+}
