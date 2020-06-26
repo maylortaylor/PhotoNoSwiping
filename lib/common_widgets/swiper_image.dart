@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/core/constants/app_theme.dart';
+import 'package:photo_no_swiping/constants/app_theme.dart';
 
 class SwiperImage {
   final String path;

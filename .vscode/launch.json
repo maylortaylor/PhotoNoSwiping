@@ -6,13 +6,13 @@
   "configurations": [
     {
       "name": "Dart [Dev]",
-      "program": "photo_no_swiping/lib/main_dev.dart",
+      "program": "lib/main_dev.dart",
       "request": "launch",
       "type": "dart"
     },
     {
       "name": "Dart [Prod]",
-      "program": "photo_no_swiping/lib/main_prod.dart",
+      "program": "lib/main_prod.dart",
       "request": "launch",
       "type": "dart"
     }

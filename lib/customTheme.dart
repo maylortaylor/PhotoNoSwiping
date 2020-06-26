@@ -1,4 +1,4 @@
-import 'package:photo_no_swiping/customThemes.dart';
+import 'package:photo_no_swiping/appThemes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

@@ -1,5 +1,5 @@
 import 'package:photo_no_swiping/customTheme.dart';
-import 'package:photo_no_swiping/customThemes.dart';
+import 'package:photo_no_swiping/appThemes.dart';
 // import 'package:photo_no_swiping/utils/sharedpref_util.dart';
 import 'package:flutter/material.dart';
 
