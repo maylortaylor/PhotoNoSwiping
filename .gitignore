@@ -1,3 +1,7 @@
+# Environment
+.env
+*.env.json
+
 # Miscellaneous
 /photo_no_swiping
 *.class
