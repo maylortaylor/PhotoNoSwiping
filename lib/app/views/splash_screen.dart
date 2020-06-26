@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/core/constants/app_strings.dart';
-import 'package:photo_no_swiping/core/widgets/splashScreen_widget.dart';
-import 'package:photo_no_swiping/routes.dart';
+import 'package:photo_no_swiping/constants/app_strings.dart';
+import 'package:photo_no_swiping/common_widgets/splashScreen_widget.dart';
+import 'package:photo_no_swiping/routing/routes.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
