@@ -2,6 +2,7 @@
 .env
 *.env.json
 *.properties
+android/*.jks
 
 # Miscellaneous
 /photo_no_swiping
