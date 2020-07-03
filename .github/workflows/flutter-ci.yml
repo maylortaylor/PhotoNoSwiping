@@ -4,6 +4,8 @@ name: Flutter CI
 
 on:
   push:
+    tags:
+      - "*"
     branches:
       - master
 
@@ -49,6 +51,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
+          tag: v1.0.1
           token: ${{ secrets.FLUTTER_TOKEN }}
       - name: Updload Release APK
         uses: actions/upload-artifact@v1
