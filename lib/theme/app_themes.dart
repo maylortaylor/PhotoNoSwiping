@@ -47,7 +47,7 @@ class AppThemes {
             color: isDark ? AppColors.appOffWhite : AppColors.appBlack,
             fontSize: 28.0,
             fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w300),
+            fontWeight: FontWeight.w800),
         headline5: TextStyle(
             color: isDark ? AppColors.appOffWhite : AppColors.appWhite,
             fontSize: 26.0,

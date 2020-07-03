@@ -16,7 +16,10 @@ class CustomButton extends StatelessWidget {
     return ButtonTheme(
       height: 75.0,
       child: RaisedButton(
-        child: Text(buttonText),
+        child: Text(
+          buttonText,
+          style: Theme.of(context).textTheme.headline1,
+        ),
         onPressed: onPressed,
         color: buttonColor,
         textColor: AppColors.appWhite,

@@ -42,6 +42,9 @@ flutter build ios
 flutter build apk -t lib/main_prod.dart
 // builds the Android app
 // https://flutter.dev/docs/deployment/android
+
+flutter packages pub run flutter_launcher_icons:main
+// create icons 
 ```
 
 ### Building For Release
