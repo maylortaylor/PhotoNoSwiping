@@ -1,4 +1,4 @@
-import 'package:photo_no_swiping/constants/app_theme.dart';
+import 'package:photo_no_swiping/common/constants/app_theme.dart';
 import 'package:flutter/material.dart';
 
 enum AppThemeKeys { LIGHT, DARK, DARKER }
@@ -47,7 +47,7 @@ class AppThemes {
             color: isDark ? AppColors.appOffWhite : AppColors.appBlack,
             fontSize: 28.0,
             fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w300),
+            fontWeight: FontWeight.w800),
         headline5: TextStyle(
             color: isDark ? AppColors.appOffWhite : AppColors.appWhite,
             fontSize: 26.0,

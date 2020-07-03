@@ -19,33 +19,37 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: "12.x"
-
+      # Outputs our Keystore to the CI environment for Gradle to use later
+      - run: echo $SIGNING_KEY | base64 -d > android/app/key.jks
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
       # Setup the flutter environment.
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable" # 'dev', 'alpha', default to: 'stable'
           # flutter-version: '1.12.x' # you can also specify exact version of flutter
-
       # Upgrade flutter
       - run: flutter upgrade
-
       # Get flutter dependencies.
       - run: flutter pub get
-
       # Check for any formatting issues in the code.
       - run: flutter format --set-exit-if-changed .
-
       # Statically analyze the Dart code for any errors.
       - run: flutter analyze .
-
       # Run widget tests for our flutter project.
       # - run: flutter test
-
       # Build apk.
-      - run: flutter build apk -t lib/main_prod.dart
-
+      - run: flutter build apk -t lib/main_prod.dart --split-per-abi
+        env:
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PATH: key.jks
+      - name: Create a Reelase Apk
       # Upload generated apk to the artifacts.
       - uses: actions/upload-artifact@v1
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
+          artifacts: "build/app/outputs/apk/debug/*.apk"
+          token: ${{ secrets.FLUTTER_TOKEN }}

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/constants/app_strings.dart';
-import 'package:photo_no_swiping/app/views/settings_screen.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
+import 'package:photo_no_swiping/views/settings_screen.dart';
 
 class DrawerOnly extends StatelessWidget {
   @override

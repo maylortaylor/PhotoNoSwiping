@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/constants/app_strings.dart';
-import 'package:photo_no_swiping/common_widgets/splashScreen_widget.dart';
-import 'package:photo_no_swiping/routing/routes.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
+import 'package:photo_no_swiping/common/widgets/splashScreen_widget.dart';
+import 'package:photo_no_swiping/routes.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Timer startTimer() {
-    var _duration = Duration(milliseconds: 1000);
+    var _duration = Duration(milliseconds: 1250);
     return Timer(_duration, navigate);
   }
 

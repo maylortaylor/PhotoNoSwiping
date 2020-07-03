@@ -3,7 +3,7 @@ class AppStrings {
 
   static const String appName = 'Photo No Swiping';
   static const String appNameCaps = 'PHOTO NO SWIPING';
-  static const String splashScreenImage = 'assets/images/logo_full.png';
+  static const String splashScreenImage = 'assets/images/splash.png';
   static const String noImage = 'assets/images/no_image.png';
   static const String noSwipingGif = 'assets/images/no_swiping.gif';
 

@@ -1,7 +1,7 @@
-import 'package:photo_no_swiping/constants/app_strings.dart';
-import 'package:photo_no_swiping/app/views/splash_screen.dart';
-import 'package:photo_no_swiping/customTheme.dart';
-import 'package:photo_no_swiping/routing/routes.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
+import 'package:photo_no_swiping/views/splash_screen.dart';
+import 'package:photo_no_swiping/theme/custom_theme.dart';
+import 'package:photo_no_swiping/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

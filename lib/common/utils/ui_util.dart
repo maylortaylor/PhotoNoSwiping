@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/constants/app_strings.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
 
 /// Contains useful consts to reduce boilerplate and duplicate code
 class UIHelper {

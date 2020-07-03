@@ -1,11 +1,12 @@
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:photo_no_swiping/constants/app_strings.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/app/viewmodels/homeScreen_viewmodel.dart';
-import 'package:photo_no_swiping/app/views/drawerOnly.dart';
-import 'package:photo_no_swiping/common_widgets/base_widget.dart';
-import 'package:photo_no_swiping/common_widgets/swiper_image.dart';
+import 'package:photo_no_swiping/models/image.dart';
+import 'package:photo_no_swiping/view_models/homeScreen_viewmodel.dart';
+import 'package:photo_no_swiping/common/widgets/drawer_only.dart';
+import 'package:photo_no_swiping/common/widgets/base_widget.dart';
+import 'package:photo_no_swiping/common/widgets/swiper_image.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -51,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
         model:
             // HomeScreenViewModel(sharedPreferencesService: Provider.of(context)),
             HomeScreenViewModel(),
-        builder: (context, model, child) => Scaffold(
+        builder: (context, vm, child) => Scaffold(
               appBar: isLocked == true
                   ? null
                   : AppBar(
@@ -68,28 +69,32 @@ class _HomeScreenState extends State<HomeScreen> {
                       tooltip: AppStrings.pickImage,
                       child: Icon(Icons.photo_library),
                       backgroundColor: Theme.of(context).primaryColor,
-                      onPressed: () {
-                        model.selectImages(context).then((selectedImages) {
-                          List<SwiperImage> tempSelectedImages = [];
-                          for (var i = 0; i < selectedImages.length; i++) {
-                            tempSelectedImages.add(SwiperImage(
-                                isAsset: false,
-                                path: selectedImages[i].path,
-                                thumb: selectedImages[i].thumbPath));
-                          }
-                          tempSelectedImages.add(SwiperImage(
-                              isAsset: true,
-                              path: AppStrings.noSwipingGif,
-                              thumb: AppStrings.noSwipingGif));
+                      onPressed: () async {
+                        await vm.selectImages(context);
 
-                          setState(() {
-                            isLocked = true;
-                            _selectedImages.clear();
-                            _selectedImages.addAll(tempSelectedImages);
-                          });
+                        setState(() {
+                          isLocked = true;
+                          _selectedImages.clear();
+                          _selectedImages
+                              .addAll(this.gatherSwiperImages(vm.imagePaths));
                         });
                       },
                     ),
             ));
+  }
+
+  List<SwiperImage> gatherSwiperImages(List<ImageModel> images) {
+    List<SwiperImage> tempSelectedImages = [];
+
+    for (var i = 0; i < images.length; i++) {
+      tempSelectedImages.add(SwiperImage(
+          isAsset: false, path: images[i].path, thumb: images[i].thumbPath));
+    }
+    tempSelectedImages.add(SwiperImage(
+        isAsset: true,
+        path: AppStrings.noSwipingGif,
+        thumb: AppStrings.noSwipingGif));
+
+    return tempSelectedImages;
   }
 }
