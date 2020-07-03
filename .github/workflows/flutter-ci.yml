@@ -47,13 +47,14 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
           ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PATH: key.jks
-      - name: Create a Release Apk
-      # Upload generated apk to the artifacts.
-      - uses: ncipollo/release-action@v1
+      - name: Create Release APK
+        # Upload generated apk to the artifacts.
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
           token: ${{ secrets.FLUTTER_TOKEN }}
-      - uses: actions/upload-artifact@v1
+      - name: Updload Release APK
+        uses: actions/upload-artifact@v1
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
