@@ -219,6 +219,9 @@ class AppThemes {
     }
   }
 
+  static ThemeData get dark => getThemeFromKey(AppThemeKeys.DARK);
+  static ThemeData get light => getThemeFromKey(AppThemeKeys.LIGHT);
+
   static ThemeData getThemeFromKey(AppThemeKeys themeKey) {
     switch (themeKey) {
       case AppThemeKeys.DARK:

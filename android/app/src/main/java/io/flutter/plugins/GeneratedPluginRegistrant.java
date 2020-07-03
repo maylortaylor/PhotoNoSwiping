@@ -16,5 +16,6 @@ public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
       com.leeson.image_pickers.ImagePickersPlugin.registerWith(shimPluginRegistry.registrarFor("com.leeson.image_pickers.ImagePickersPlugin"));
+    flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());
   }
 }

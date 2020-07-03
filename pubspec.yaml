@@ -37,9 +37,10 @@ dependencies:
   # Photo View provides a gesture sensitive zoomable widget. PhotoView is largely used to show interacive images.
   # photo_view: ^0.9.2
   # Wraps NSUserDefaults (on iOS) and SharedPreferences (on Android), providing a persistent store for simple data
-  # shared_preferences: ^0.5.7+3
+  shared_preferences:
   # The best swiper(carousel) for flutter, with multiple layouts, infinite loop. Compatible with Android & iOS.
   flutter_swiper: ^1.1.6
+  day_night_switch:
 
 dev_dependencies:
   flutter_test:
