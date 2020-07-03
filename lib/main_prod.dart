@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:photo_no_swiping/app/appRoot.dart';
-import 'package:photo_no_swiping/customTheme.dart';
-import 'package:photo_no_swiping/appThemes.dart';
-import 'package:photo_no_swiping/utils/json_util.dart';
+import 'package:photo_no_swiping/common/widgets/app_root.dart';
+import 'package:photo_no_swiping/theme/custom_theme.dart';
+import 'package:photo_no_swiping/theme/app_themes.dart';
+import 'package:photo_no_swiping/common/utils/json_util.dart';
 // import 'package:photo_no_swiping/utils/sharedPref_util.dart';
-import 'package:photo_no_swiping/env.dart';
+import 'package:photo_no_swiping/models/env.dart';
 
 void main() {
   debugPaintSizeEnabled = false;

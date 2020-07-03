@@ -1,4 +1,4 @@
-import 'package:photo_no_swiping/constants/app_theme.dart';
+import 'package:photo_no_swiping/common/constants/app_theme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

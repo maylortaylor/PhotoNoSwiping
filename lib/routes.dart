@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/app/views/home_screen.dart';
-import 'package:photo_no_swiping/app/views/settings_screen.dart';
-import 'package:photo_no_swiping/app/views/splash_screen.dart';
+import 'package:photo_no_swiping/views/home_screen.dart';
+import 'package:photo_no_swiping/views/settings_screen.dart';
+import 'package:photo_no_swiping/views/splash_screen.dart';
 
 class Routes {
   static const String splash = '/splash';

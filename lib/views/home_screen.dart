@@ -1,11 +1,11 @@
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:photo_no_swiping/constants/app_strings.dart';
+import 'package:photo_no_swiping/common/constants/app_strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_no_swiping/app/viewmodels/homeScreen_viewmodel.dart';
-import 'package:photo_no_swiping/app/views/drawerOnly.dart';
-import 'package:photo_no_swiping/common_widgets/base_widget.dart';
-import 'package:photo_no_swiping/common_widgets/swiper_image.dart';
+import 'package:photo_no_swiping/view_models/homeScreen_viewmodel.dart';
+import 'package:photo_no_swiping/common/widgets/drawer_only.dart';
+import 'package:photo_no_swiping/common/widgets/base_widget.dart';
+import 'package:photo_no_swiping/common/widgets/swiper_image.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
