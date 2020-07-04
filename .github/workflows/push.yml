@@ -1,4 +1,4 @@
-name: Flutter Push And Test
+name: Flutter Push
 
 on: push
 
@@ -19,7 +19,7 @@ jobs:
       - run: flutter pub get
       - run: flutter format --set-exit-if-changed .
       - run: flutter analyze .
-      - run: flutter test
+      # - run: flutter test
       # Build apk.
       - run: flutter build apk --debug -t lib/main_prod.dart
         env:
