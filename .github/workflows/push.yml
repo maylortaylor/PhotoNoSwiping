@@ -1,6 +1,9 @@
 name: Flutter Push
 
-on: push
+on:
+  push:
+    branches:
+      - "!master"
 
 jobs:
   build:
