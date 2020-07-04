@@ -18,7 +18,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 #
 # version: 2.0.0+2
 # Everything before plus is version name and after is version code. So here the version code is 2 and name is 2.0.0.
-version: 1.0.0+6
+version: 1.0.0+7
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
