@@ -2,6 +2,8 @@ name: Flutter Push And Test
 
 on:
   push:
+    tags:
+      - "!refs/tags/*"
     branches:
       - '\*/\*'
       - '\*'
