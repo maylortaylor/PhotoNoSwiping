@@ -51,7 +51,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
-          tag: v1.0.2
+          tag: v1.0.3
           token: ${{ secrets.FLUTTER_TOKEN }}
       # - name: Upload Release APK
       #   uses: actions/upload-artifact@v1
