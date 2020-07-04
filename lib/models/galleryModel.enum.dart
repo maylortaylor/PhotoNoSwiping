@@ -1,0 +1,5 @@
+enum GalleryMode {
+  image,
+
+  video,
+}
