@@ -1,5 +1,6 @@
 # Photo No Swiping
-![Flutter CI](https://github.com/maylortaylor/PhotoNoSwiping/workflows/Flutter%20CI/badge.svg)
+![Flutter Push](https://github.com/maylortaylor/PhotoNoSwiping/workflows/Flutter%20Push/badge.svg)
+![Flutter Build APK Release](https://github.com/maylortaylor/PhotoNoSwiping/workflows/Flutter%20Build%20APK%20Release/badge.svg)
 
 Photo No Swiping is a Flutter based project that allows users to select multiple photos and only show those selected photos.
 
