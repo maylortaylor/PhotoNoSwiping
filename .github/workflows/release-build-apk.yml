@@ -41,7 +41,7 @@ jobs:
       # Run widget tests for our flutter project.
       # - run: flutter test
       # Build apk.
-      - run: flutter build apk -t lib/main_prod.dart --split-per-abi
+      - run: flutter build apk --debug -t lib/main_prod.dart --split-per-abi
         env:
           KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
