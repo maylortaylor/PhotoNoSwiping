@@ -51,5 +51,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
-          tag: v1.0.7
+          tag: v1.0.8
           token: ${{ secrets.FLUTTER_TOKEN }}
