@@ -42,14 +42,14 @@ jobs:
       # - run: flutter test
       # Build apk.
       - run: flutter build apk -t lib/main_prod.dart --split-per-abi
-        env:
-          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEY_PATH: key.jks
+        # env:
+        #   KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+        #   KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        #   KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+        #   KEY_PATH: key.jks
       - name: Push APK to Releases
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*.apk"
-          tag: v1.0.8
+          tag: v1.0.9
           token: ${{ secrets.FLUTTER_TOKEN }}
