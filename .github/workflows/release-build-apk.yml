@@ -47,9 +47,9 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PATH: key.jks
-      - name: Push APK to Releases
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "build/app/outputs/apk/debug/*.apk"
-          tag: v1.0.9
-          token: ${{ secrets.FLUTTER_TOKEN }}
+      # - name: Push APK to Releases
+      #   uses: ncipollo/release-action@v1
+      #   with:
+      #     artifacts: "build/app/outputs/apk/debug/*.apk"
+      #     tag: v1.0.9
+      #     token: ${{ secrets.FLUTTER_TOKEN }}
